@@ -1,0 +1,20 @@
+{
+  "name": "tp-3-modulos-en-node",
+  "version": "1.0.0",
+  "description": "",
+  "homepage": "https://github.com/Felibeck/TP-3-Modulos-en-Node#readme",
+  "bugs": {
+    "url": "https://github.com/Felibeck/TP-3-Modulos-en-Node/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Felibeck/TP-3-Modulos-en-Node.git"
+  },
+  "license": "ISC",
+  "author": "",
+  "type": "module",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  }
+}
