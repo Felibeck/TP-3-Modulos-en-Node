@@ -3,7 +3,7 @@
 import fs from 'fs';
 
 const productos = fs.readFileSync('./productos.json', 'utf-8');
-// console.log(productos);
+console.log(productos);
 
 //ejercicio 2
 
@@ -17,13 +17,14 @@ const agregarProducto = (nombre, precio, descripcion) => {
     fs.writeFileSync('./productos.json', JSON.stringify(productos));
 };
 
-// agregarProducto("Papas Fritas Medianas", 40, "Papas fritas de tamaño mediano, perfectas para acompañar tus comidas.");
-// console.log(JSON.parse(fs.readFileSync('./productos.json', 'utf-8')));
+agregarProducto("Papas Fritas Medianas", 40, "Papas fritas de tamaño mediano, perfectas para acompañar tus comidas.");
+console.log(JSON.parse(fs.readFileSync('./productos.json', 'utf-8')));
 
 
 // ejercicio 3
 
 import dayjs from 'dayjs';
+import { clearInterval } from 'timers';
 
 const getFechaActual = () => dayjs().format('DD/MM/YYYY')
 const getHoraActual = () => dayjs().format('HH:mm:ss');
@@ -98,19 +99,68 @@ const productosCSV = productosEj5.map(producto => `${producto.nombre},${producto
 fs.writeFileSync('./productos.csv', productosCSV, 'utf-8');
 
 
-// // 7. Temporizador programado
-
-// Desarrollar un programa que utilice setTimeout y setInterval para simular un contador.
-
-// El programa deberá:
-
-// Contar del 1 al 10.
-// Mostrar un número cada 1 segundo.
-// Cuando llegue a 10 mostrar:
-// Fin del contador
+// // Ejercicio 7
 
 
+let contador = 1;
+
+const intervalo = setInterval(() => {
+ if(contador === 1)
+ {
+  console.log("Iniciando contador...")
+ }
+  console.log(contador)
+
+  if(contador >= 10)
+  {
+    clearInterval(intervalo);
+
+    setTimeout(() => {
+      console.log("Fin del contador")
+    }, 500);
+  }
+
+  contador++;
+
+}, 1000)
 
 
+// Ejercicio 8
 
+
+const analizarTexto = texto =>
+{
+  const chars = texto.split('');
+  const objeto = {
+
+    caracteres: texto.length,
+    palabras: texto.split(' ').length,
+    vocales: chars.filter(c => 'aeiou'.includes(c.toLowerCase())).length,
+    consonantes: chars.filter(c => 'bcdfghjklmnpqrstvwxyz'.includes(c.toLowerCase())).length
+
+  }
+  return objeto;
+}
+
+let analisis = analizarTexto("Hola Mundo")
+console.log(analisis)
+
+
+// Ejercicio 9
+
+
+const validarPassword = password =>
+{
+  const esValida = password.length >= 8 && /[0-9]/.test(password) && /[A-Z]/.test(password);
+
+  if(esValida)
+  {
+    console.log("Password válida")
+  }else
+  {
+    console.log("Password inválida")
+  }
+}
+
+validarPassword("Abcdefg")
 
