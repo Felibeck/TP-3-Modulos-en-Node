@@ -1,1 +1,17 @@
-[{"nombre":"BigMc","precio":10.99,"descripcion":"Descripción del BigMc"},{"nombre":"Grand Tasty Turbo Bacon Doble","precio":20.49,"descripcion":"Descripción del Grand Tasty Turbo Bacon Doble"},{"nombre":"Papas Fritas Medianas","precio":40,"descripcion":"Papas fritas de tamaño mediano, perfectas para acompañar tus comidas."},{"nombre":"Papas Fritas Medianas","precio":40,"descripcion":"Papas fritas de tamaño mediano, perfectas para acompañar tus comidas."},{"nombre":"Papas Fritas Medianas","precio":40,"descripcion":"Papas fritas de tamaño mediano, perfectas para acompañar tus comidas."},{"nombre":"Papas Fritas Medianas","precio":40,"descripcion":"Papas fritas de tamaño mediano, perfectas para acompañar tus comidas."}]
+[
+  {
+    "nombre": "BigMc",
+    "precio": 10.99,
+    "descripcion": "Descripción del BigMc"
+  },
+  {
+    "nombre": "Grand Tasty Turbo Bacon Doble",
+    "precio": 20.49,
+    "descripcion": "Descripción del Grand Tasty Turbo Bacon Doble"
+  },
+  {
+    "nombre": "Papas Fritas Medianas",
+    "precio": 40,
+    "descripcion": "Papas fritas de tamaño mediano, perfectas para acompañar tus comidas."
+  }
+]

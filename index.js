@@ -92,7 +92,22 @@ buscarProducto("bIgmc")
  const productosEj5 = JSON.parse(contenidoProductos)
 
 
+const productosCSV = productosEj5.map(producto => `${producto.nombre},${producto.precio}`).join('\n');
 
+
+fs.writeFileSync('./productos.csv', productosCSV, 'utf-8');
+
+
+// // 7. Temporizador programado
+
+// Desarrollar un programa que utilice setTimeout y setInterval para simular un contador.
+
+// El programa deberá:
+
+// Contar del 1 al 10.
+// Mostrar un número cada 1 segundo.
+// Cuando llegue a 10 mostrar:
+// Fin del contador
 
 
 
